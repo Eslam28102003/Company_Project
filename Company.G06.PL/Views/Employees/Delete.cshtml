@@ -1,0 +1,18 @@
+﻿@using Company.G06.PL.ViewModels.Employees
+@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete Employee</h1>
+<br/>
+<br/>
+
+<form asp-action="Delete">
+    <partial name="PartialViews/EditCreateEmployeePartialView"/>
+    <input asp-for="ImageName" hidden />  
+  
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+

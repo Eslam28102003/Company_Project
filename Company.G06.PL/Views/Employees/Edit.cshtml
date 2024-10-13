@@ -1,0 +1,26 @@
+﻿@using Company.G06.PL.ViewModels.Employees
+@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Edit Employee</h1>
+<br/>
+<br/>
+<form asp-action="Edit" enctype="multipart/form-data">
+
+    <div asp-validation-summary="All" class="alert alert-danger"></div>
+    <partial name="PartialViews/EditCreateEmployeePartialView" model="Model"/>
+
+   
+ 
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <input asp-for="ImageName" hidden />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+@section ValidationSection {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+}
+
